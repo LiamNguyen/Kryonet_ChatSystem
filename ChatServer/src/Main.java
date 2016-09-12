@@ -27,7 +27,6 @@ public class Main {
                         PacketClientConnected connectedPacket = new PacketClientConnected();
                         connectedPacket.connectedClientName = connectingPacket.username;
                         server.sendToAllExceptTCP(connection.getID(), connectedPacket);
-                        System.out.println("TEsting server");
                     } else if (object instanceof PacketClientDisconnected) {
                         PacketClientDisconnected disconnetedPacket = (PacketClientDisconnected) object;
                         clients.remove(disconnetedPacket.disconnectedClientName);
